@@ -1,0 +1,49 @@
+<!--Probar primero class y despues functional o viceversa -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--Importamos react con los script de abajo-->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+
+//El class de abajo es lo mismo que el functional(=>) que usamos abajo
+class Saludo extends React.Component {
+render(){
+    return (
+    <ul>
+       <li>H</li>
+       <li>o</li>
+       <li>l</li>
+        </ul>
+    );
+}
+}
+
+ReactDOM.render(<Saludo></Saludo>,document.getElementById("root"));
+//*es lo mismo q esto de abajo
+const Saludo2 = () =>{
+    return (
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        </ul>
+    );
+}
+
+ReactDOM.render(<Saludo2></Saludo2>,document.getElementById("root"));
+    
+
+</script>
+</body>
+</html>
